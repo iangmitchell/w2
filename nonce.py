@@ -1,4 +1,5 @@
 import os
+import sys
 import hashlib
 
 def sha256(s):
@@ -10,7 +11,7 @@ def sha256(s):
 
 MAX=20000
 nonceHex=hex(0)
-filename='0.txt'
+filename=sys.argv[1] #'0.txt'
 f=open(filename,'r')
 data=f.read()
 f.close()
@@ -20,8 +21,8 @@ print('target')
 targetList=list(target)
 targetList[0]='0'
 targetList[1]='0'
-targetList[2]='0'
-targetList[3]='0'
+#targetList[2]='0'
+#targetList[3]='0'
 target="".join(targetList)
 print(target)
 i=1
